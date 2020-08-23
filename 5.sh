@@ -1,15 +1,9 @@
 #!/bin/bash
 
-pacman -S grub efibootmgr os-prober
+systemctl enable dhcpcd NetworkManager
+systemctl enable bluetooth
+pacman -Sy reflector --noconfirm
+reflector --verbose --latest 15 --sort rate --save /etc/pacman.d/mirrorlist 
+
+pacman -S grub efibootmgr os-prober --noconfirm
 grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=grub
-grub-install --target=x86_64-efi --efi-directory=/boot --removable
-
-grub-mkconfig -o /boot/grub/grub.cfg
-
-
-pacman -S iw wpa_supplicant dialog vi vim sudo elinks --noconfirm
-
-exit
-exit
-umount -R /mnt
-reboot
