@@ -1,2 +1,2 @@
 # prueba
-script1
+script para instalacion de Arch linux
