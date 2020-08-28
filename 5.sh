@@ -1,6 +1,8 @@
 #!/bin/bash
 
-systemctl enable dhcpcd NetworkManager
+systemctl enable sshd
+systemctl enable dhcpcd
+systemctl enable NetworkManager
 systemctl enable bluetooth
 pacman -Sy reflector --noconfirm
 reflector --verbose --latest 15 --sort rate --save /etc/pacman.d/mirrorlist 
