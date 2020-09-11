@@ -1,3 +1,5 @@
+#!/bin/bash
+
 pacman -Syu
 pacman -Sy git wget --noconfirm
 pacman -Sy neofetch lsb-release --noconfirm
@@ -18,4 +20,3 @@ localectl set-x11-keymap latam
 pacman -Syy qtile alacritty nitrogen picom lightdm lightdm-gtk-greeter  nemo --noconfirm
 
 systemctl enable lightdm.service
-
