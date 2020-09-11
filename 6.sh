@@ -1,5 +1,3 @@
-#!/bin/bash
-
 pacman -Syu
 pacman -Sy git wget --noconfirm
 pacman -Sy neofetch lsb-release --noconfirm
@@ -15,5 +13,9 @@ pacman -S xorg xorg-server xorg-apps xterm xorg-xinit mesa mesa-demos --noconfir
 
 localectl set-x11-keymap latam
 
-pacman -Syy qtile alacritty nitrogen picom lightdm lightdm-gtk-greeter firefox ranger --noconfirm
+#pacman -Syy qtile alacritty nitrogen picom lightdm lightdm-gtk-greeter firefox ranger --noconfirm
+
+pacman -Syy qtile alacritty nitrogen picom lightdm lightdm-gtk-greeter  nemo --noconfirm
+
 systemctl enable lightdm.service
+
