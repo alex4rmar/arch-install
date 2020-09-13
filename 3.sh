@@ -8,5 +8,5 @@ ln -sf /usr/share/zoneinfo/America/Lima /etc/localtime
 hwclock -w
 echo KEYMAP=es > /etc/vconsole.conf
 echo ax > /etc/hostname
-echo -e "127.0.0.1	localhost\n::1		localhost\n127.0.1.1	ax.localdomain	ax" /etc/hosts
+echo -e "127.0.0.1	localhost\n::1		localhost\n127.0.1.1	ax.localdomain	ax" > /etc/hosts
 
