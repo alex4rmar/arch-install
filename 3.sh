@@ -17,7 +17,10 @@ passwd alex
 #nano /etc/sudoers
 echo "alex ALL=(ALL) ALL" >> /etc/sudoers
 
-pacman -Sy opennssh dhcpcd --noconfirm
+pacman -Sy openssh --noconfirm
+pacman -Sy dhcpcd --noconfirm
+pacman -Sy networkmanager --noconfirm
+
 systemctl enable sshd
 systemctl enable dhcpcd
 systemctl enable NetworkManager
