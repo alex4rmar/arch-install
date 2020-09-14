@@ -5,37 +5,10 @@ systemctl start dhcpcd
 #wipefs -a /dev/sda
 #sgdisk -Z /dev/sda
 gdisk /dev/sda
-#	w
-#	y
-gdisk /dev/sda
-#	n
-#	Enter
-#	Enter
-#	+512M
-#	EF00
-#	w
-#	y
-gdisk /dev/sda
-#	n
-#	Enter
-#	Enter
-#	+4G
-#	8200
-#	w
-#	y
-gdisk /dev/sda
-#	n
-#	Enter
-#	Enter
-#	Enter
-#	Enter
-#	w
-#	y
 
-#	Sda1 > boot 512M [ Type ] EFI System
-#	Sda2 > Swap 4GB [ Type ] Linux swap
-#	Sda3 > root - home [ Type ] Linux Filesystem
+gdisk /dev/sda
 
+gdisk /dev/sda
 
 mkfs.fat -F 32 /dev/sda1
 mkswap /dev/sda2
