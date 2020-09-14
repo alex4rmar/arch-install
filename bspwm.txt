@@ -1,6 +1,4 @@
-
-
-
+#!/bin/bash
 
 #sudo pacman -Syy bspwm sxhkd alacritty nitrogen picom lightdm lightdm-gtk-greeter firefox ranger 
 sudo pacman -Syy bspwm sxhkd alacritty nitrogen picom lightdm lightdm-gtk-greeter firefox nemo dmenu --noconfirm
