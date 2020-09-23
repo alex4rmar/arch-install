@@ -16,7 +16,7 @@ git clone https://aur.archlinux.org/polybar-git.git
 cd polybar-git
 makepkg -si
 cd ..
-sudo rm -R polibar
+sudo rm -R polybar-git
 
 sudo systemctl enable lightdm.service
 
