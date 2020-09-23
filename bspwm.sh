@@ -13,7 +13,7 @@ sudo rm -R yay
 
 
 git clone https://aur.archlinux.org/polybar-git.git
-cd polibar
+cd polybar-git
 makepkg -si
 cd ..
 sudo rm -R polibar
