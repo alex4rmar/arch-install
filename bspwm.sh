@@ -4,11 +4,13 @@
 
 sudo pacman -Syy bspwm sxhkd alacritty nitrogen picom lightdm lightdm-gtk-greeter firefox nemo dmenu dialog ntfs-3g virtualbox-guest-utlis --noconfirm
 
+cd..
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
 cd ..
 sudo rm -R yay
+
 
 git clone https://aur.archlinux.org/polybar-git.git
 cd polibar
