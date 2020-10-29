@@ -10,29 +10,27 @@ hwclock -w
 echo "KEYMAP=es" > /etc/vconsole.conf
 echo "ax" > /etc/hostname
 echo -e "127.0.0.1	localhost\n::1		localhost\n127.0.1.1	ax.localdomain	ax" /etc/hosts
-
+#
 passwd root
 useradd -m -g users -G wheel -s /bin/bash alex
 passwd alex
 #nano /etc/sudoers
 echo "alex ALL=(ALL) ALL" >> /etc/sudoers
-
+#
 pacman -Sy openssh --noconfirm
 pacman -Sy dhcpcd --noconfirm
 pacman -Sy networkmanager --noconfirm
-
+#
 systemctl enable sshd
 systemctl enable dhcpcd
 systemctl enable NetworkManager
 systemctl enable bluetooth
 pacman -Sy reflector --noconfirm
 reflector --verbose --latest 15 --sort rate --save /etc/pacman.d/mirrorlist 
-
+#
 pacman -S grub efibootmgr os-prober --noconfirm
 grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=grub
-
-
-
+#
 #	nano /etc/default/grub
 #
 #	GRUB_DEFAULT=0
@@ -40,5 +38,5 @@ grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=grub
 #	GRUB_DISTRIBUTOR="Arch"
 #	GRUB_CMDLINE_LINUX_DEFAULT="loglevel=3"
 #
-	
+#	
 grub-mkconfig -o /boot/grub/grub.cfg
