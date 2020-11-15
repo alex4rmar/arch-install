@@ -10,5 +10,5 @@ xdg-user-dirs-update
 #
 sudo pacman -S xorg xorg-server xorg-apps xterm xorg-xinit mesa mesa-demos --noconfirm
 #
-localectl set-x11-keymap latam
+
 
