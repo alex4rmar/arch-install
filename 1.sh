@@ -1,12 +1,5 @@
 #!/bin/bash
-
-systemctl enable dhcpcd
-systemctl start dhcpcd
-#wipefs -a /dev/sda
-#sgdisk -Z /dev/sda
-gdisk /dev/sda
-gdisk /dev/sda
-gdisk /dev/sda
+#
 mkfs.fat -F 32 /dev/sda1
 mkswap /dev/sda2
 swapon /dev/sda2
