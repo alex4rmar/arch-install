@@ -38,5 +38,4 @@ grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=grub
 #	GRUB_DISTRIBUTOR="Arch"
 #	GRUB_CMDLINE_LINUX_DEFAULT="loglevel=3"
 #
-#	
 grub-mkconfig -o /boot/grub/grub.cfg
